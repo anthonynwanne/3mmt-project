@@ -37,7 +37,7 @@ app.get('/login', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login'); // Ensure "login" matches the filename in your views directory
 });
-app.get('/', (req, res) => {
+app.get('/login', (req, res) => {
     res.render('home');
 });
 
