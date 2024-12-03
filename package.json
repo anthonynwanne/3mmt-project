@@ -6,7 +6,8 @@
         "express": "^4.21.1",
         "method-override": "^3.0.0",
         "mongoose": "^8.8.2",
-        "nodemon": "^3.1.7"
+        "nodemon": "^3.1.7",
+        "pug": "^3.0.3"
     },
     "name": "3mmt-project",
     "version": "1.0.0",

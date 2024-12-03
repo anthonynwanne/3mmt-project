@@ -20,12 +20,12 @@ app.use(methodOverride("_method"));
 //app.use(express.static(path.join(__dirname, "public")));
 
 // Use EJS as the view engine
-app.set('view engine', 'ejs');
+app.set('view engine', 'pug');
 
-app.set('views', path.join(__dirname, '3mmt-project'));
+app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
-  res.render("login.ejs"); // Ensure "login" matches the filename in your views directory
+  res.render("login"); // Ensure "login" matches the filename in your views directory
 });
 app.get('/', (req, res) => {
     res.render("home");
