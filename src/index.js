@@ -24,7 +24,7 @@ app.use(methodOverride("_method"));
 //app.use(express.static(path.join(__dirname, "public")));
 
 // Use EJS as the view engine
-//app.engine('ejs')
+app.engine('ejs')
 app.set('view engine', 'ejs');
 //app.set('views', path.join(__dirname, 'views'));
 
