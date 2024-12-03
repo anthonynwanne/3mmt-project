@@ -6,6 +6,8 @@ const collection = require('./config');
 const bodyParser = require("body-parser");
 const Task = require("./model/task");
 const methodOverride = require("method-override");
+const expressVue = require('express-vue');
+
 
 const app = express();
 // convert data into json format
@@ -18,9 +20,12 @@ app.use(methodOverride("_method"));
 
 // Static file serving (for CSS, JS, images)
 //app.use(express.static(path.join(__dirname, "public")));
+app.engine('vue', expressVue);
+app.set('view engine', 'vue');
+app.set('views', path.join(__dirname, 'views'));
 
 // Use EJS as the view engine
-app.set('view engine', 'pug');
+//app.set('view engine', 'ejs');
 
 //app.set('views', path.join(__dirname, '~/'));
 

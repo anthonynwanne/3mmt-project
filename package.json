@@ -4,6 +4,7 @@
         "cors": "^2.8.5",
         "ejs": "^3.1.10",
         "express": "^4.21.1",
+        "express-vue": "^5.16.0",
         "method-override": "^3.0.0",
         "mongoose": "^8.8.2",
         "nodemon": "^3.1.7",
