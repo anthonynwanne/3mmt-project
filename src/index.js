@@ -31,7 +31,7 @@ app.get('/signup', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'login.ejs'));
+    res.sendFile(path.join(__dirname, 'views'));
 });
 
 app.get('/', (req, res) => {
