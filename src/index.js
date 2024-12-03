@@ -22,7 +22,7 @@ app.use(methodOverride("_method"));
 // Use EJS as the view engine
 app.set('view engine', 'ejs');
 
-app.set('views', path.join(__dirname, 'login'));
+app.set('views', path.join(__dirname, '/'));
 
 app.get('/', (req, res) => {
     res.render("login"); // Ensure "login" matches the filename in your views directory
