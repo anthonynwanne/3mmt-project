@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
 const collection = require('./config');
-//const cors = require('cors');
+const cors = require('cors');
 const bodyParser = require("body-parser");
 const Task = require("./model/task");
 const methodOverride = require("method-override");
@@ -24,7 +24,7 @@ app.use(methodOverride("_method"));
 //app.use(express.static(path.join(__dirname, "public")));
 
 // Use EJS as the view engine
-app.engine('ejs')
+//app.engine('ejs')
 app.set('view engine', 'ejs');
 //app.set('views', path.join(__dirname, 'views'));
 
