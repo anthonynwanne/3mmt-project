@@ -19,12 +19,16 @@ app.use(methodOverride("_method"));
 // Use EJS as the view engine
 app.set('view engine', 'ejs');
 
-//app.set('views', path.join(__dirname, 'src/views'));
+app.set('views', path.join(__dirname, 'views'));
 
 
 // Static file serving (for CSS, JS, images)
-app.use(express.static(path.join(__dirname, "public")));
+//app.use(express.static(path.join(__dirname, "public")));
 
+
+app.get('/signup', (req, res) => {
+    res.render('signup');
+});
 
 app.get('/', (req, res) => {
     res.render('login');
@@ -34,9 +38,6 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/signup', (req, res) => {
-    res.render('signup');
-});
 
 //Register User
 app.post('/signup', async (req, res) => {
