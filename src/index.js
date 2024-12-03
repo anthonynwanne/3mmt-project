@@ -31,6 +31,10 @@ app.get('/signup', (req, res) => {
 });
 
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'login.ejs'));
+});
+
+app.get('/', (req, res) => {
     res.render('login'); // Ensure "login" matches the filename in your views directory
 });
 app.get('/', (req, res) => {
