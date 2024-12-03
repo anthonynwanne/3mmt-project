@@ -94,14 +94,14 @@
 
             <button type="submit">Apply Filters</button>
              
-            <form action="/tasks/:id" method="DELETE">
+            <form action="/tasks/:id" method="POST">
                 <button type="delete">Delete Task</button>
             </form>
 
         </form>
         <!-- update Form -->
         <h3> Update Tasks</h3>
-        <form action="/tasks/:id/edit" method="GET">
+        <form action="/tasks/:id/edit" method="POST">
             <h3>Search and Update Tasks</h3>
             <label for="keyword">Search by Id:</label>
             <input type="text" id="keyword" name="keyword"><br><br>
@@ -118,7 +118,7 @@
             <label for="dueDate">Updatte Due Date:</label>
             <input type="date" id="dueDate" name="dueDate"><br><br>
 
-            <button type="submit">Update Task</button>
+            <button type="reset">Update Task</button>
         </form>
     </div>
     <script src="/src/index.js"></script>
