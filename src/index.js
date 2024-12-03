@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Use EJS as the view engine
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+//app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
     res.render('login'); // Ensure "login" matches the filename in your views directory
