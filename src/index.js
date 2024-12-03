@@ -31,7 +31,7 @@ app.get('/signup', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views'));
+    res.find('/');
 });
 
 app.get('/', (req, res) => {
