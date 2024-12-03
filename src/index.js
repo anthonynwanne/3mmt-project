@@ -6,32 +6,31 @@ const collection = require('./config');
 const bodyParser = require("body-parser");
 const Task = require("./model/task");
 const methodOverride = require("method-override");
-const expressVue = require('express-vue');
+
 
 
 const app = express();
+
 // convert data into json format
 //app.use(express.json());
 
 //app.use(express.urlencoded({extended: false}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 // Static file serving (for CSS, JS, images)
 //app.use(express.static(path.join(__dirname, "public")));
-app.engine('vue', expressVue);
-app.set('view engine', 'vue');
-app.set('views', path.join(__dirname, 'views'));
 
 // Use EJS as the view engine
-//app.set('view engine', 'ejs');
-
-//app.set('views', path.join(__dirname, '~/'));
+app.engine('ejs')
+app.set('view engine', 'ejs');
+//app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
   res.render("login"); // Ensure "login" matches the filename in your views directory
-  console.log(__dirname)
+  //console.log(__dirname)
 });
 app.get('/', (req, res) => {
     res.render("home");
