@@ -17,11 +17,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
 // Static file serving (for CSS, JS, images)
-app.use(express.static(path.join(__dirname, "public")));
+//app.use(express.static(path.join(__dirname, "public")));
 
 // Use EJS as the view engine
 app.set('view engine', 'ejs');
-//app.set('views', path.join(__dirname, 'views'));
+app.use('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
     res.render('login'); // Ensure "login" matches the filename in your views directory
