@@ -23,21 +23,17 @@ app.set('view engine', 'ejs');
 
 
 // Static file serving (for CSS, JS, images)
-//app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 
 app.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-app.get('/login', (req, res) => {
-    res.render('login');
-});
-
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     res.render('login'); // Ensure "login" matches the filename in your views directory
 });
-app.get('/login', (req, res) => {
+app.get('/', (req, res) => {
     res.render('home');
 });
 
